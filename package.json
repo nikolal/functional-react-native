@@ -5,7 +5,11 @@
   "author": "Nikola Lukic",
   "private": true,
   "scripts": {
-    "start": "exp start"
+    "start": "exp start",
+    "test": "node_modules/jest/bin/jest.js --watch"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
@@ -23,13 +27,18 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-preset-react-native": "1.9.2",
+    "babel-jest": "^20.0.3",
+    "babel-preset-react-native": "^2.0.0",
     "eslint": "^4.1.1",
     "eslint-plugin-better": "^0.1.5",
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-react": "^7.0.1",
     "exp": "^42.1.0",
+    "jest": "^20.0.4",
+    "jest-expo": "^18.0.0",
+    "react-test-renderer": "^16.0.0",
     "redux-logger": "^3.0.6"
   }
 }

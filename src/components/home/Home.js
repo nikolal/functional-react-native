@@ -9,8 +9,7 @@ import S from 'sanctuary';
 import { fonts, metrics, colors } from '../../theme/index.js';
 import config from '../../../config/api.js';
 
-const Home = (props) => {
-
+export const Home = (props) => {
   // Async request example
   const getGithubName = username =>
     Future.encaseP(fetch)(`${config.url}${username}`) // Future monad wraps fetch

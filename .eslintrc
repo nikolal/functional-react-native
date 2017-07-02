@@ -17,10 +17,11 @@
 
   "plugins": [
     "react",
-    "fp"
+    "fp",
+    "jest"
   ],
 
-  "extends": "plugin:fp/recommended",
+  "extends": ["plugin:fp/recommended", "plugin:jest/recommended"],
 
   // Map from global var to bool specifying if it can be redefined
   "globals": {
@@ -271,6 +272,14 @@
     "fp/no-throw": 2,
     "fp/no-unused-expression": 2,
     "fp/no-valueof-field": 2,
-    "no-var": 2
+    "no-var": 2,
+
+    // fp Plugin
+    // The following rules are made available via `eslint-plugin-jest`.
+
+    "jest/no-disabled-tests": 1,
+    "jest/no-focused-tests": 2,
+    "jest/no-identical-title": 2,
+    "jest/valid-expect": 2
   }
 }
