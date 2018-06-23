@@ -1,5 +1,5 @@
 import React from 'react';
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import { metrics, colors, fonts } from '../../theme/index.js';
 import Login from '../login/Login.js';
 import Tabs from '../tabs/Tabs.js';
@@ -13,10 +13,8 @@ const navigationConfig = {
   navigationOptions: ({ navigation }) => ({
     headerLeft: <HeaderLeft navigation={navigation} />,
     headerRight: <HeaderRight navigation={navigation} />,
-    // headerBackTitle: 'Back',
     headerTintColor: colors.white,
     headerStyle: {
-      justifyContent: 'center',
       backgroundColor: colors.black,
     },
     headerTitleStyle: {
@@ -26,7 +24,7 @@ const navigationConfig = {
   }),
 };
 
-const Navigator = StackNavigator({
+const Navigator = createStackNavigator({
   Tabs: { screen: Tabs },
   Login: { screen: Login },
 }, navigationConfig);

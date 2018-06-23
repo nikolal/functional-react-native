@@ -1,20 +1,9 @@
 import React from 'react';
-import { TabNavigator } from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 import { colors, fonts } from '../../theme/index.js';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../home/Home.js';
 import About from '../about/About.js';
-
-const styles = {
-  inactiveTintColor: colors.white,
-  activeTintColor: colors.red,
-  labelStyle: {
-    fontSize: fonts.size.small,
-  },
-  style: {
-    backgroundColor: colors.black
-  },
-};
 
 const navigationConfig = {
   showIcon: true,
@@ -22,7 +11,7 @@ const navigationConfig = {
   swipeEnabled: true
 };
 
-const Tabs = TabNavigator({
+const Tabs = createBottomTabNavigator({
   Home: {
     screen: Home,
     navigationOptions: {
@@ -42,5 +31,16 @@ const Tabs = TabNavigator({
     }
   }
 }, navigationConfig);
+
+const styles = {
+  inactiveTintColor: colors.white,
+  activeTintColor: colors.red,
+  labelStyle: {
+    fontSize: fonts.size.small,
+  },
+  style: {
+    backgroundColor: colors.black
+  },
+};
 
 export default Tabs;
