@@ -12,5 +12,13 @@ $ npm i
 ```
 and
 ```bash
-$ npm start
+$ exp start
+```
+### Run IOS/Android
+```bash
+$ exp ios
+```
+or
+```bash
+$ exp android
 ```
