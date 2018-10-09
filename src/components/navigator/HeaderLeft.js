@@ -6,7 +6,7 @@ import { metrics, colors, fonts } from '../../theme/index.js';
 const HeaderLeft = props => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.iconContainer} onPress={() => props.navigation.navigate('DrawerOpen')}>
+      <TouchableOpacity style={styles.iconContainer} onPress={() => props.navigation.openDrawer()}>
         <Ionicons name="md-menu" size={30} color={colors.white} />
       </TouchableOpacity>
     </View>
