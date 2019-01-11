@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBottomTabNavigator } from 'react-navigation';
+import { createBottomTabNavigator, createA } from 'react-navigation';
 import { colors, fonts } from '../../theme/index.js';
 import { Ionicons } from '@expo/vector-icons';
 import Home from '../home/Home.js';
