@@ -14,7 +14,7 @@ const colors = {
   textTabs: 'grey',
   textTabsActive: 'white',
   iconTabs: 'grey',
-  iconTabsActive: 'white',
+  iconTabsActive: 'blue',
   backgroundTabs: 'blue',
 
   //Text
