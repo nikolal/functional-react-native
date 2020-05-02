@@ -4,12 +4,20 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { increaseValue } from './HomeContainer';
 import { metrics, colors, fonts } from '../../theme';
+import Header from '../../navigation/Header.js';
 
 
-const Home = (props) => {
+function Home(props) {
 
   return (
     <View style={styles.container}>
+      <Header
+        navigation={props.navigation}
+        drawer
+        // back
+        handleRightPress={() => alert('right')}
+      />
+      <Text>Home</Text>
       <Text style={styles.text}>{props.value}</Text>
     </View>
   );

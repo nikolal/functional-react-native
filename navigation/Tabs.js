@@ -1,19 +1,27 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
-import TabBarIcon from '../components/TabBarIcon';
 import Home from '../screens/home/Home.js';
 import About from '../screens/about/About.js';
 
+import { Ionicons } from '@expo/vector-icons';
+import { colors } from '../theme';
+
+const TabBarIcon = (props) => {
+  return (
+    <Ionicons
+      name={props.name}
+      size={30}
+      style={{ marginBottom: -3 }}
+      color={props.focused ? colors.iconTabsActive : colors.iconTabs}
+    />
+  );
+}
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
 
-export default function BottomTabNavigator({ navigation, route }) {
-  // Set the header title on the parent stack navigator depending on the
-  // currently active tab. Learn more in the documentation:
-  // https://reactnavigation.org/docs/en/screen-options-resolution.html
-  navigation.setOptions({ headerTitle: getHeaderTitle(route) });
+function Tabs({ navigation, route }) {
 
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
@@ -37,13 +45,6 @@ export default function BottomTabNavigator({ navigation, route }) {
   );
 }
 
-function getHeaderTitle(route) {
-  const routeName = route.state?.routes[route.state.index]?.name ?? INITIAL_ROUTE_NAME;
+export default Tabs;
 
-  switch (routeName) {
-    case 'Home':
-      return 'How to get started';
-    case 'About':
-      return 'About to learn more';
-  }
-}
+
