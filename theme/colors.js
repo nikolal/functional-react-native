@@ -30,7 +30,14 @@ const colors = {
   //Theme
   primary: 'blue',
   secondary: 'yellow',
-  background: 'white'
+  background: 'white',
+
+  //Button
+  buttonBackground: 'blue',
+  buttonText: 'white',
+
+  //Input
+  textInput: 'black'
 
 };
 
