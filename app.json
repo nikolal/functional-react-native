@@ -1,21 +1,27 @@
 {
   "expo": {
-    "name": "functional-react-native-expo-starter",
-    "description": "An empty new project",
-    "slug": "functional-react-native-expo-starter",
-    "privacy": "public",
-    "sdkVersion": "32.0.0",
+    "name": "functional-react-native",
+    "slug": "functional-react-native",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app.png",
-    "loading": {
-      "icon": "./assets/icons/loading.png",
-      "hideExponentText": false
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "packagerOpts": {
-      "assetExts": ["ttf", "mp4"]
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     }
